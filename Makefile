@@ -20,7 +20,7 @@ setup-tmux:
 
 .PHONY: setup-docker
 setup-docker:
-	echo "setting up docker"
+	./bin/docker.sh
 
 .PHONY: setup-tmuxifier
 setup-tmuxifier:
@@ -30,7 +30,5 @@ setup-tmuxifier:
 setup-git:
 	echo "setting up git"
 
-.PHONY: all
-all: setup-git setup-tmux setup-tmuxifier setup-nvm setup-nvchad setup-zsh setup-go
-
+.PHONY: setup
 # Install nvm, neovim with custom config directory (install ripgrep), oh-my-sh with plugins, tmux, docker, tmuxifier, git (with ssh config template file)
