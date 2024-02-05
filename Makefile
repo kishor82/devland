@@ -31,4 +31,5 @@ setup-git:
 	echo "setting up git"
 
 .PHONY: setup
-# Install nvm, neovim with custom config directory (install ripgrep), oh-my-sh with plugins, tmux, docker, tmuxifier, git (with ssh config template file)
+setup:
+	echo "All the setup here..."
