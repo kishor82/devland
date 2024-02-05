@@ -1,6 +1,6 @@
 .PHONY: setup-go
 setup-go:
-	echo "setting up go environment"
+	./bin/go.sh
 
 .PHONY: setup-nvm
 setup-nvm:

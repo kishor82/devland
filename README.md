@@ -9,6 +9,7 @@ This Makefile automates the setup of a customized development environment, inclu
 - [Docker](https://www.docker.com/)
 - [Tmuxifier](https://github.com/jimeh/tmuxifier)
 - [Git](https://git-scm.com/) with a custom SSH configuration template file
+- [Go](https://go.dev/)
 
 ## Prerequisites
 
