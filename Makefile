@@ -4,7 +4,7 @@ setup-go:
 
 .PHONY: setup-nvm
 setup-nvm:
-	echo "setting up nvm"
+	./bin/install-nvm.sh
 
 .PHONY: setup-zsh
 setup-zsh:
