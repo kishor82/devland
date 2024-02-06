@@ -17,8 +17,8 @@ rm go.tar.gz
 
 # Set Go environment variables
 echo "Setting up Go environment variables..."
-echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
-source ~/.bashrc
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.zshrc
+source ~/.zshrc
 
 # Verify Go installation
 echo "Verifying Go installation..."
