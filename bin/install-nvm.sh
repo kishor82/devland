@@ -14,11 +14,10 @@ sudo apt-get remove --purge nodejs npm -y
 echo "Downloading and installing NVM..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 
-# Source NVM script to make it available in the current shell
-source "$HOME/.nvm/nvm.sh"
 
-# Install latest LTS version of Node.js
-echo "Installing the latest LTS version of Node.js..."
-nvm install --lts
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion' >> ~/.zshrc
+
 
 echo "NVM installation completed."
