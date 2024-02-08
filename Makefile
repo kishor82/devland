@@ -8,7 +8,7 @@ setup-nvm:
 
 .PHONY: setup-zsh
 setup-zsh:
-	echo "setting up zsh"
+	./bin/zsh.sh
 
 .PHONY: setup-nvchad
 setup-nvchad:
