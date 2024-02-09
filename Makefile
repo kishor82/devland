@@ -10,8 +10,12 @@ setup-nvm:
 setup-zsh:
 	./bin/zsh.sh
 
+.PHONY: setup-nerd-fonts
+setup-nerd-fonts:
+	./bin/nerd-fonts.sh
+
 .PHONY: setup-nvchad
-setup-nvchad:
+setup-nvchad: setup-nerd-fonts
 	echo "setting up nvchad"
 
 .PHONY: setup-tmux
