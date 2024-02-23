@@ -16,7 +16,7 @@ setup-nerd-fonts:
 
 .PHONY: setup-nvchad
 setup-nvchad: setup-nerd-fonts
-	echo "setting up nvchad"
+	./bin/nvchad.sh
 
 .PHONY: setup-tmux
 setup-tmux:
