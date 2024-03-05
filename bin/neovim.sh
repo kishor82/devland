@@ -26,12 +26,12 @@ if [ "$OS" = "Darwin" ]; then
     xattr -c ./nvim-macos.tar.gz
 
     # Extract Neovim macOS tarball
-    echo "Extracting Neovim for macOS..."
-    tar xzvf nvim-macos.tar.gz
+    echo "Extracting Neovim for macOS..."I
+    tar xzvf nvim-macos.tar.gz -C ~/.local/share/
 
-    # Run Neovim
-    echo "Running Neovim..."
-    ./nvim-macos/bin/nvim
+    cd ~/.local/bin/
+    ln -sf ~/.local/share/nvim-macos/bin/nvim nvim
+
 
     echo "Neovim installation completed on macOS."
 
@@ -45,11 +45,10 @@ elif [ "$OS" = "Linux" ]; then
 
     # Extract Neovim Linux tarball
     echo "Extracting Neovim for Linux..."
-    tar xzvf nvim-linux64.tar.gz
+    tar xzvf nvim-linux64.tar.gz -C ~/.local/share/
 
-    # Run Neovim
-    echo "Running Neovim..."
-    ./nvim-linux64/bin/nvim
+    cd ~/.local/bin/
+    ln -sf ~/.local/share/nvim-linux64/bin/nvim nvim
 
     echo "Neovim installation completed on Linux."
 
