@@ -1,10 +1,14 @@
 #!/bin/bash
 
+LOCAL_BIN_DIR="$HOME/.local/bin"
 # Check if Neovim is already installed
 if command -v nvim &> /dev/null; then
     echo "Neovim is already installed. Exiting."
     exit 0
 fi
+
+# Create directory for fonts if it doesn't exist
+mkdir -p $LOCAL_BIN_DIR
 
 # Determine the OS
 OS=$(uname -s)
@@ -29,9 +33,10 @@ if [ "$OS" = "Darwin" ]; then
     echo "Extracting Neovim for macOS..."I
     tar xzvf nvim-macos.tar.gz -C ~/.local/share/
 
+    rm ./nvim-macos.tar.gz
+
     cd ~/.local/bin/
     ln -sf ~/.local/share/nvim-macos/bin/nvim nvim
-
 
     echo "Neovim installation completed on macOS."
 
@@ -46,6 +51,8 @@ elif [ "$OS" = "Linux" ]; then
     # Extract Neovim Linux tarball
     echo "Extracting Neovim for Linux..."
     tar xzvf nvim-linux64.tar.gz -C ~/.local/share/
+
+    rm ./nvim-linux64.tar.gz
 
     cd ~/.local/bin/
     ln -sf ~/.local/share/nvim-linux64/bin/nvim nvim
