@@ -10,12 +10,16 @@ setup-nvm:
 setup-zsh:
 	./bin/zsh.sh
 
+.PHONY: setup-neovim
+setup-neovim:
+	./bin/neovim.sh
+
 .PHONY: setup-nerd-fonts
 setup-nerd-fonts:
 	./bin/nerd-fonts.sh
 
 .PHONY: setup-nvchad
-setup-nvchad: setup-nerd-fonts
+setup-nvchad: setup-neovim setup-nerd-fonts
 	./bin/nvchad.sh
 
 .PHONY: setup-tmux
