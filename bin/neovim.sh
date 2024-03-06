@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# TODO: Add this to PATH
 LOCAL_BIN_DIR="$HOME/.local/bin"
 # Check if Neovim is already installed
 if command -v nvim &> /dev/null; then
@@ -33,8 +33,6 @@ if [ "$OS" = "Darwin" ]; then
     echo "Extracting Neovim for macOS..."I
     tar xzvf nvim-macos.tar.gz -C ~/.local/share/
 
-    rm ./nvim-macos.tar.gz
-
     cd ~/.local/bin/
     ln -sf ~/.local/share/nvim-macos/bin/nvim nvim
 
@@ -51,8 +49,6 @@ elif [ "$OS" = "Linux" ]; then
     # Extract Neovim Linux tarball
     echo "Extracting Neovim for Linux..."
     tar xzvf nvim-linux64.tar.gz -C ~/.local/share/
-
-    rm ./nvim-linux64.tar.gz
 
     cd ~/.local/bin/
     ln -sf ~/.local/share/nvim-linux64/bin/nvim nvim
