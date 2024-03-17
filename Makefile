@@ -23,8 +23,12 @@ setup-nvchad: setup-neovim setup-nerd-fonts
 	./bin/nvchad.sh
 
 .PHONY: setup-tmux
-setup-tmux:
+setup-tmux: setup-tpm
 	./bin/tmux.sh 
+
+.PHONY: setup-tpm
+setup-tpm:
+	./bin/tpm.sh 
 
 .PHONY: setup-docker
 setup-docker:
