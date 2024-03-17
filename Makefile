@@ -23,16 +23,20 @@ setup-nvchad: setup-neovim setup-nerd-fonts
 	./bin/nvchad.sh
 
 .PHONY: setup-tmux
-setup-tmux:
-	echo "setting up tmux"
+setup-tmux: setup-tpm setup-tmuxifier
+	./bin/tmux.sh 
+
+.PHONY: setup-tpm
+setup-tpm:
+	./bin/tpm.sh 
+
+.PHONY: setup-tmuxifier
+setup-tmuxifier:
+	./bin/tmuxifier.sh
 
 .PHONY: setup-docker
 setup-docker:
 	./bin/docker.sh
-
-.PHONY: setup-tmuxifier
-setup-tmuxifier:
-	echo "setup-tmuxifier"
 
 .PHONY: setup-git
 setup-git:
