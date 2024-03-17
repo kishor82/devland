@@ -24,7 +24,7 @@ setup-nvchad: setup-neovim setup-nerd-fonts
 
 .PHONY: setup-tmux
 setup-tmux:
-	echo "setting up tmux"
+	./bin/tmux.sh 
 
 .PHONY: setup-docker
 setup-docker:
