@@ -15,7 +15,7 @@ fi
 # Install pre-requisite packages if not already installed
 if ! command -v rg &>/dev/null; then
     echo "Installing ripgrep..."
-    sudo apt-get install ripgrep
+    sudo apt-get install ripgrep -y
 fi
 
 # Clone NVChad configuration from GitHub
