@@ -9,6 +9,9 @@ if git clone https://github.com/jimeh/tmuxifier.git ~/.tmuxifier; then
   # Add comment
   echo '# tmuxifier config' >> "$shell_config_file"
 
+  echo 'export EDITOR="nvim"' >> "$shell_config_file"
+  echo 'export VISUAL="nvim"' >> "$shell_config_file"
+
   # Add to PATH 
   echo 'export PATH="$HOME/.tmuxifier/bin:$PATH"' >> "$shell_config_file"
 

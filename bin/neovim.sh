@@ -60,3 +60,13 @@ else
     exit 1
 fi
 
+# Check if ~/.local/bin is already in PATH
+if [[ ":$PATH:" != *":$HOME/.local/bin:"* ]]; then
+    # Add ~/.local/bin to PATH
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+    echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc
+    echo "Added ~/.local/bin to PATH"
+else
+    echo "~/.local/bin is already in PATH"
+fi
+

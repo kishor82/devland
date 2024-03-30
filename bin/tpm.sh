@@ -8,18 +8,22 @@ source_file="$script_dir/../configs/tmux/tmux.conf"
 target_dir="$HOME/.config/tmux"
 filename="tmux.conf"
 
+# Create the target directory if it doesn't exist
+mkdir -p "$target_dir"
+
 if git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm; then
 
   # Check if the file exists in the target directory
   if [ ! -f "$target_dir/$filename" ]; then
       # If the file doesn't exist, copy it to the target directory
       cp "$source_file" "$target_dir"
-     `` echo "File copied successfully."
+      echo "File copied successfully."
   else
       # If the file already exists, print a message
       echo "File '$filename' already exists in the target directory. Skipping copy."
   fi
 
 else
+  #TODO: change this message
   echo "Git clone failed. Unable to proceed with copy operation."
 fi

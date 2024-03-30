@@ -22,4 +22,7 @@ fi
 git clone https://github.com/kishor82/Custom-NvChad.git ~/.config/nvim --depth 1
 
 # Notify user to run additional commands after setup completes
-echo "Setup complete. You may need to run additional commands for NVIM to work properly."
+echo "nvchad and Neovim have been successfully installed!"
+echo "To activate the changes, please run: source ~/.zshrc"
+echo "After sourcing ~/.zshrc, you can launch Neovim by typing 'nvim' in your terminal."
+echo "Additionally, ensure that ~/.local/bin is in your PATH for nvim plugins and executables."
