@@ -12,3 +12,5 @@ else
     echo "Unsupported operating system."
 fi
 
+echo "Run tmux with `tmux -u` command."
+
