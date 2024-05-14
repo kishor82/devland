@@ -14,7 +14,7 @@ fi
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     # Install Oh My Zsh
     echo "Installing Oh My Zsh..."
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    y | sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
     # TODO: add script to install plugins here...
     # Install Powerline fonts

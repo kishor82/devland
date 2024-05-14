@@ -38,10 +38,18 @@ setup-tmuxifier:
 setup-docker:
 	./bin/docker.sh
 
-.PHONY: setup-git
-setup-git:
-	echo "setting up git"
+.PHONY: setup-ssh-config
+setup-ssh-config:
+	echo "setting up ssh config"
 
 .PHONY: setup
-setup:
-	echo "All the setup here..."
+setup-dev: setup-zsh setup-nvchad setup-tmux setup-nvm setup-go
+	echo "setting up devland...💻"
+
+.PHONY: docker-test
+docker-test: docker-build
+	docker run -it devland /bin/bash
+
+.PHONY: docker-build
+docker-build:
+	docker build . -t devland
